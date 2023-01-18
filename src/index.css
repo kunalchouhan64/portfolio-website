@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,124 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.text-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+      #62b7ba 0.89%,
+      #d45e0f 17.23%,
+      #3118d7 42.04%,
+      #ae17ae 55.12%,
+      #fb00ff 71.54%,
+      #e805f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(153.47deg,
+      rgba(255, 255, 255, 0) -341.94%,
+      #14101d 95.11%);
+}
+
+#about_div:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+#about_btn:hover {
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  transition: all 0.3s linear;
+}
+
+#about_img:hover {
+  transition: all 0.3s linear;
+}
+
+#hero_btn {
+  transition: all 0.3s ease-in-out;
+}
+
+#hero_btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.services_div:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s linear;
+  border: 3px solid white;
+}
+
+#Hero_Img {
+  animation: profile_animate 4s ease-in-out infinite 1s;
+}
+
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+
+
+.show_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: all 500ms linear;
+}
+
+.shox_box_content {
+
+  height: 70vh;
+  width: 30vw;
+  border-radius: 10px;
+  padding: 20px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px 3px red;
+  transition: all 1s linear;
+  opacity: 0;
+
+}
+
+.hide{
+  visibility: hidden;
+}
+.hideme{
+  visibility: hidden;
 }
